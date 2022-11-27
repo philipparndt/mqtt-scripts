@@ -30,14 +30,14 @@ jobs:
 #        env:
 #          RELEASE_VERSION: ${{ steps.next.outputs.version }}
 #        run: npm version $RELEASE_VERSION --allow-same-version
-
-      - name: Install
-        shell: bash
-        run: npm install
-
-      - name: Build
-        shell: bash
-        run: npm run build
+#
+#      - name: Install
+#        shell: bash
+#        run: npm install
+#
+#      - name: Build
+#        shell: bash
+#        run: npm run build
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
