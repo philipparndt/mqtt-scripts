@@ -1,4 +1,4 @@
-FROM node as jsbuilder
+FROM node:18.6-alpine as jsbuilder
 
 COPY . /app
 WORKDIR /app
