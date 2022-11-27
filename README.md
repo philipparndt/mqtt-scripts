@@ -8,6 +8,8 @@
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 [![License][mit-badge]][mit-url]
 
+Forked to provide ARMv8 + ARMv64 images.
+
 > mqtt-scripts is a Node.js based script runner for use in mqtt based smart home environments. 
 
 It's intentended to be used as the "logic layer" in your smart home, and offers a zero-boilerplate, straight forward 
