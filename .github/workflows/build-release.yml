@@ -26,10 +26,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           releaseType: ${{ github.event.inputs.releaseType }}
 
-      - name: Update version
-        env:
-          RELEASE_VERSION: ${{ steps.next.outputs.version }}
-        run: npm version $RELEASE_VERSION --allow-same-version
+#      - name: Update version
+#        env:
+#          RELEASE_VERSION: ${{ steps.next.outputs.version }}
+#        run: npm version $RELEASE_VERSION --allow-same-version
 
       - name: Install
         shell: bash

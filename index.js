@@ -339,7 +339,7 @@ function runScript(script, name) {
             debug() {
                 const args = Array.prototype.slice.call(arguments);
                 args.unshift(name + ':');
-                log.debug.apply(log, args);
+                log.debug(...args);
             },
             /**
              * Log an info message
@@ -350,7 +350,7 @@ function runScript(script, name) {
             info() {
                 const args = Array.prototype.slice.call(arguments);
                 args.unshift(name + ':');
-                log.info.apply(log, args);
+                log.info(...args);
             },
             /**
              * Log a warning message
@@ -361,7 +361,7 @@ function runScript(script, name) {
             warn() {
                 const args = Array.prototype.slice.call(arguments);
                 args.unshift(name + ':');
-                log.warn.apply(log, args);
+                log.warn(...args);
             },
             /**
              * Log an error message
@@ -372,7 +372,7 @@ function runScript(script, name) {
             error() {
                 const args = Array.prototype.slice.call(arguments);
                 args.unshift(name + ':');
-                log.error.apply(log, args);
+                log.error(...args);
             }
         },
         /**

@@ -1,0 +1,34 @@
+name: Application
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+
+      - name: Install
+        run: |
+          npm install
+
+      - name: Lint/Test
+        run: |
+          npm run lint
+          npm test
+
+      - name: Build
+        run: |
+          npm run build
+
+      - name: Build container
+        run: docker-compose build
