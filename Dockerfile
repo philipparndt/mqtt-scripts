@@ -7,7 +7,7 @@ RUN npm install
 
 # ---------------------------------------------------------
 
-FROM node:slim
+FROM node:18.6-alpine
 
 COPY --from=jsbuilder /app /app
 
